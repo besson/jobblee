@@ -20,7 +20,7 @@ var map = new Datamap({
     }
 });
 
-d3.json("http://localhost:3000/map/bubbles", function(error, json) {
+d3.json("map/bubbles", function(error, json) {
   if (error) return console.warn(error);
 
   jobs = json;
