@@ -26,7 +26,7 @@ namespace :jobs do
       jobs = JSON.parse(response.body)["facet_counts"]["facet_fields"]["title"]
 
       jobs.each_slice(2) do |job|
-        if (job[1] > 5)
+        if (job[1] > 0)
           bubble = Bubble.create!(name: job[0], value: job[1], metric: metric, location: location)
           puts "#{bubble.name} located at #{location.state}"
         end

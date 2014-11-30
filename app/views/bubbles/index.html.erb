@@ -1,8 +1,7 @@
-<% @bubbles.each do |bubble| %>
-	<div>
-	<%= bubble.id %>
-	<%= bubble.name %>
-	<%= bubble.metric.nil? ? "none" : bubble.metric.name %>
-	<%= bubble.categories.empty? ? "empty" : bubble.categories[0].name %>
-	</div>
-<% end %>
+<%= javascript_include_tag "d3.v3.min" %>
+<%= javascript_include_tag "topojson.v1.min" %>
+<%= javascript_include_tag "datamaps.all.min" %>
+
+<div id="container" style="position: relative; width: 1000px; height: 600px;"></div>
+
+<%= javascript_include_tag "map" %>
