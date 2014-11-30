@@ -9,6 +9,6 @@ class BubblesController < ApplicationController
   end
 
   def map
-    render json: Bubble.all.map{ |bubble| bubble.to_map}
+    render json: Bubble.all.to_json
   end
 end

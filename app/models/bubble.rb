@@ -4,7 +4,13 @@ class Bubble < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, through: :categorizations
 
-  def to_map
-    self
+  def as_json(options={})
+    { name: name,
+      radius: value,
+      fillKey: name.split.map(&:chr).join,
+      state: location.state,
+      latitude: location.latitude,
+      longitude: location.longitude
+    }
   end
 end
