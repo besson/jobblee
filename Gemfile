@@ -13,5 +13,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'httparty'
-
+gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging'
 ruby "2.0.0"
