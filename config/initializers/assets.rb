@@ -6,6 +6,7 @@ Rails.application.config.assets.precompile += %w( d3.v3.min.js )
 Rails.application.config.assets.precompile += %w( topojson.v1.min.js )
 Rails.application.config.assets.precompile += %w( datamaps.all.min.js )
 Rails.application.config.assets.precompile += %w( map.js )
+Rails.application.config.assets.precompile += %w( chart.js )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.

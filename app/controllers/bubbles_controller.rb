@@ -11,4 +11,8 @@ class BubblesController < ApplicationController
   def map
     render json: Bubble.all.to_json
   end
+
+  def controller
+  end
+
 end
