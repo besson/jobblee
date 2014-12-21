@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.1.7'
-# gem 'sqlite3'
+
+group :test do
+  gem 'sqlite3'
+end
+
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -15,4 +19,5 @@ gem 'spring',        group: :development
 gem 'httparty'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
+gem 'rspec-rails'
 ruby "2.0.0"
