@@ -19,5 +19,10 @@ gem 'spring',        group: :development
 gem 'httparty'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
-gem 'rspec-rails'
+
+group :development, :test do
+    gem 'rspec-rails', '~> 3.0'
+    gem 'factory_girl_rails', '~> 4.0'
+end
+
 ruby "2.0.0"
