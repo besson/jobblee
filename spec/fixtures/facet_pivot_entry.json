@@ -1,0 +1,1 @@
+[{"field": "title", "value": "Senior Software Engineer", "count": 17, "pivot": [{"field": "company", "value": "walmart.com", "count": 17, "pivot": [{"field": "geo_location", "value": "37.368830,-122.036350", "count": 10}, {"field": "geo_location", "value": "37.630490,-122.411084", "count": 4}, {"field": "geo_location", "value": "37.680766,-122.399972", "count": 3}]}]}]

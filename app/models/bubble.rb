@@ -6,7 +6,7 @@ class Bubble < ActiveRecord::Base
 
   def as_json(options={})
     { name: name,
-      radius: value <= 50 ? value : 50,
+      radius: value * 5, 
       fillKey: name.split.map(&:chr).join,
       state: location.state,
       latitude: location.latitude,

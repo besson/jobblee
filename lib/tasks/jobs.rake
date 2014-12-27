@@ -16,23 +16,12 @@ namespace :jobs do
     end
   end
 
-  desc "TODO"
+  desc "Loading job bubbles"
   task bubble: :environment do
     metric = Metric.find_by name: "position"
     Bubble.where(metric:metric).destroy_all
 
-    Location.all.each do |location|
-      response = HTTParty.get("http://localhost:8983/solr/jobs/select?q=*:*&fq=location:'#{location.state}'&facet=on&facet.field=title&wt=json&rows=0")
-      jobs = JSON.parse(response.body)["facet_counts"]["facet_fields"]["title"]
-
-      jobs.each_slice(2) do |job|
-        if (job[1] > 0)
-          bubble = Bubble.create!(name: job[0], value: job[1], metric: metric, location: location)
-          puts "#{bubble.name} located at #{location.state}"
-        end
-      end
-
-    end
+    bubbles = JobBubbleBuilder.build_from_facet(JobSearch.pivot_facet)
   end
 
 end
