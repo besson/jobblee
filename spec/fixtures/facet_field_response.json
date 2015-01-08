@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":1,"params":{"q":"*:*","facet.field":"company","rows":"0","facet":"on","wt":"json"}},"response":{"numFound":2315,"start":0,"docs":[]},"facet_counts":{"facet_queries":{},"facet_fields":{"company":["amazon",1799,"facebook",450,"walmart.com",66]},"facet_dates":{},"facet_ranges":{},"facet_intervals":{}}}

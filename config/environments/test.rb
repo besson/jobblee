@@ -36,4 +36,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  #
+  config.solr_host = "http://ec2-54-94-206-228.sa-east-1.compute.amazonaws.com:8983/solr/jobs"
 end
