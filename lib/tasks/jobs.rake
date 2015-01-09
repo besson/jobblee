@@ -1,8 +1,9 @@
-namespace :jobs do
+namespace :jobblee do
   desc "Setting metric"
   task metric: :environment do
     Metric.where(name: "position").destroy_all
     Metric.create(name: "position")
+    Metric.create(name: "company")
   end
 
   desc "Loading locations"
@@ -17,11 +18,20 @@ namespace :jobs do
   end
 
   desc "Loading job bubbles"
-  task bubble: :environment do
+  task job_bubble: :environment do
     metric = Metric.find_by name: "position"
     Bubble.where(metric:metric).destroy_all
 
     bubbles = JobBubbleBuilder.build_from_facet(JobSearch.pivot_facet)
   end
+
+  desc "Loading company bubbles"
+  task company_bubble: :environment do
+    metric = Metric.find_by name: "company"
+    Bubble.where(metric:metric).destroy_all
+
+    bubbles = CompanyBubbleBuilder.build_from_facet(CompanySearch.facet)
+  end
+
 
 end
