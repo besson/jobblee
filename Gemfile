@@ -23,4 +23,4 @@ group :development, :test do
     gem 'factory_girl_rails', '~> 4.0', :require => false
 end
 
-ruby "2.0.0"
+ruby "2.1.1"

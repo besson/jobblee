@@ -8,7 +8,6 @@ class Bubble < ActiveRecord::Base
     { name: name,
       radius: value * 3,
       fillKey: name.split.map(&:chr).join,
-      state: location.state,
       latitude: location.latitude,
       longitude: location.longitude
     }

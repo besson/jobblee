@@ -1,8 +1,9 @@
-class BubblesController < ApplicationController
+class StatsController < ApplicationController
 
   def index
-    @bubbles = Bubble.all
+    @top_jobs = Stats.top5jobs
+    @top_locations = Stats.top5locations
+    @companies = Stats.companies
   end
 
 end
-
