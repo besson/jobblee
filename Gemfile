@@ -17,6 +17,7 @@ gem 'spring',        group: :development
 gem 'httparty'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
+gem "chartkick"
 
 group :development, :test do
     gem 'rspec-rails', '~> 3.0'
