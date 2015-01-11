@@ -5,10 +5,11 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
   pool: 5
   timeout: 5000
-  database: db/jobblee.sqlite3
+  database: bstats
 
 development:
   adapter: sqlite3
